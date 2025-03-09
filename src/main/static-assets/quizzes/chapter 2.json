@@ -1,0 +1,39 @@
+{
+    "quizzes": [
+        {
+            "id": 1,
+            "question": "What is the capital of Bangladesh?",
+            "correct_answer": "Dhaka",
+            "options": ["Chittagong", "Rajshahi", "Dhaka", "Sylhet"],
+            "point": 1
+        },
+        {
+            "id": 2,
+            "question": "Which river is known as the lifeblood of Bangladesh?",
+            "correct_answer": "Padma River",
+            "options": ["Meghna River", "Padma River", "Jamuna River", "Karnaphuli River"],
+            "point": 1
+        },
+        {
+            "id": 3,
+            "question": "When did Bangladesh gain independence?",
+            "correct_answer": "1971",
+            "options": ["1969", "1971", "1975", "1980"],
+            "point": 1
+        },
+        { 
+            "id": 4,
+            "question": "Which is the largest city in Bangladesh by population?",
+            "correct_answer": "Dhaka",
+            "options": ["Chittagong", "Rajshahi", "Khulna", "Dhaka"],
+            "point": 1
+        },
+        {
+            "id": 5,
+            "question": "What is the national flower of Bangladesh?",
+            "correct_answer": "Water Lily",
+            "options": ["Rose", "Jasmine", "Water Lily", "Sunflower"],
+            "point": 1
+        }
+    ]
+}

@@ -1,0 +1,808 @@
+/**
+ * @desc :- This file is used to import all the css files in the project.
+ * created_by :- Kawsar Bin Siraj (30/01/2025)
+ */
+@use "./_fonts" as *;
+@use "./_buttons" as *;
+
+:root {
+    --header-height: 54px;
+    --theme-clr-1: #00b140;
+    --theme-clr-2: #00ab4dd5;
+    --theme-clr-3: #ea5400;
+    --theme-clr-4: #99cc33;
+    --theme-clr-5: #ffb500;
+    --theme-shadow-1: 0px 2px 8px 0px #00000026;
+}
+
+#app {
+    font-weight: 400;
+    font-family: "Quicksand";
+
+    &.lang-bn {
+        .lang-switchable {
+            font-family: "SolaimanLipi" !important;
+        }
+    }
+}
+
+/**
+ * @desc :- helper classes
+ * created_by :- Kawsar Bin Siraj (01/02/2025)
+ */
+.font-quicksand {
+    font-family: "Quicksand";
+}
+.font-solaimanLipi {
+    font-family: "SolaimanLipi";
+}
+
+.text-theme-1 {
+    color: var(--theme-clr-1) !important;
+}
+
+.text-theme-3 {
+    color: var(--theme-clr-3) !important;
+}
+
+.bg-theme-1 {
+    background-color: var(--theme-clr-1) !important;
+}
+
+.border-theme-1 {
+    border-color: var(--theme-clr-1) !important;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.btn {
+    transition: all 0.3s linear;
+}
+
+.btn-theme-1 {
+    background-color: var(--theme-clr-1) !important;
+    color: #fff !important;
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:is(:hover) {
+        background-color: var(--theme-clr-2) !important;
+    }
+}
+
+.height-full {
+    min-height: calc(100vh - var(--header-height) - 1px);
+}
+
+.container-fluid {
+    --bs-gutter-x: 3.25rem;
+}
+
+.from-group {
+    position: relative;
+
+    .form-label {
+        --label-color: #54585a;
+        color: var(--label-color) !important;
+    }
+
+    .err-msg {
+        position: absolute;
+        top: calc(100% - 12px);
+        background-color: #fff;
+        margin-left: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 2px;
+        pointer-events: none;
+    }
+}
+.theme-shadow-1 {
+    box-shadow: var(--theme-shadow-1);
+}
+
+@media (min-width: 1400px) {
+    /* XXL Screens Only */
+    .col-xxl-5-custom {
+        width: 20%;
+    }
+}
+
+/**
+ * @desc :- css for header
+ * created_by :- Kawsar Bin Siraj (30/01/2025)
+ */
+header#header {
+    .header-height {
+        height: var(--header-height);
+        -webkit-app-region: drag; /* Make toolbar draggable */
+
+        .title-bar-controls {
+            * {
+                -webkit-app-region: no-drag; /* Make buttons clickable */
+            }
+
+            .form-select {
+                --bs-form-select-bg-img: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.99997 5.85067C4.82075 5.85067 4.64155 5.78224 4.50492 5.64567L0.205141 1.34585C-0.0683805 1.07233 -0.0683805 0.62886 0.205141 0.355449C0.478552 0.0820378 0.921933 0.0820378 1.19548 0.355449L4.99997 4.16017L8.80449 0.355582C9.07801 0.0821707 9.52135 0.0821707 9.79474 0.355582C10.0684 0.628993 10.0684 1.07246 9.79474 1.34598L5.49503 5.6458C5.35832 5.7824 5.17913 5.85067 4.99997 5.85067Z' fill='%2300B140'/%3E%3C/svg%3E%0A");
+                background-size: 12px;
+                box-shadow: none !important;
+                outline: none;
+                padding-right: 35px;
+                padding-bottom: 5px;
+                border: 0;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.window-custom-controller {
+    button {
+        background-color: transparent !important;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        --size: 32px;
+        width: var(--size);
+        height: var(--size);
+        display: grid;
+        place-items: center;
+        transition: none;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: var(--bs-gray-200) !important;
+        }
+
+        &.btn-window-close {
+            &:hover {
+                background-color: var(--bs-danger) !important;
+                color: #fff !important;
+            }
+        }
+    }
+}
+
+/**
+ * @desc :- css for auth
+ * created_by :- Kawsar Bin Siraj (30/01/2025)
+ */
+#auth {
+    .wrappingWithImg-context {
+        position: sticky;
+        top: calc(var(--header-height) + 1px);
+    }
+
+    #img-context {
+        height: calc(100vh - var(--header-height) - 1px);
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .title {
+        font-size: clamp(20px, 2.25vw, 34px);
+        font-weight: 700;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .desc {
+        font-size: clamp(16px, 1.75vw, 24px) !important;
+    }
+
+    .btn-signup {
+        --w: 310px;
+        --h: 48px;
+        width: var(--w);
+        height: var(--h);
+        font-size: 16px;
+    }
+}
+
+/**
+ * @desc :- sidebar style
+ * created_by :- Kawsar Bin Siraj (04/02/2025)
+ */
+
+.dashboard-grid-row {
+    --sidebar-w: 275px;
+    --grid-gap: 25px;
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    grid-gap: var(--grid-gap);
+
+    @media (max-width: 1200px) {
+        --sidebar-w: 250px;
+    }
+}
+
+#sidebar {
+    --padding: 25px;
+    padding-top: var(--padding);
+    padding-right: var(--padding);
+
+    .nav-link {
+        --size: 50px;
+        height: var(--size);
+        border-radius: 26px;
+        padding: 0 !important;
+        padding-left: 10px !important;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #efefef;
+        border: 1px solid transparent;
+        transition: all 0.2s linear;
+        color: #505050;
+
+        &.active {
+            background-color: var(--theme-clr-1) !important;
+            color: #fff !important;
+        }
+
+        + .nav-link {
+            margin-top: 15px;
+        }
+
+        .icon {
+            width: calc(var(--size) - 14px);
+            height: calc(var(--size) - 14px);
+            background-color: #fff;
+            border-radius: 100%;
+            display: inline-grid;
+            place-items: center;
+            border: 1px solid transparent;
+            transition: all 0.2s linear;
+        }
+
+        &:hover:not(.active) {
+            background-color: rgba(var(--bs-success-rgb), 0.1) !important;
+            border-color: rgba(var(--bs-success-rgb), 0.3) !important;
+
+            .icon {
+                border-color: rgba(var(--bs-success-rgb), 0.3) !important;
+            }
+        }
+
+        .text {
+            font-size: 18px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            font-weight: 500;
+        }
+    }
+}
+
+/**
+ * @desc :- card-widget
+ * created_by :- Kawsar Bin Siraj (04/02/2025)
+ */
+.ChaptersComp {
+    .DashImg-wrapper {
+        --size: 220px;
+        box-shadow: 0px 2px 8px 0px #00000026;
+        border-radius: 10px !important;
+    }
+}
+
+.card-widget {
+    --radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: var(--radius);
+    transition: all 0.2s linear;
+
+    &:hover {
+        box-shadow:
+            rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+            rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+    .card-img-wrapper {
+        border-radius: calc(var(--radius) + 2px);
+        overflow: hidden;
+
+        .card-img-block {
+            border-radius: calc(var(--radius) + 2px);
+            overflow: hidden;
+        }
+    }
+
+    .playIcon {
+        --size: 36px;
+        width: var(--size);
+        height: var(--size);
+        display: grid;
+        place-items: center;
+        margin: 10px;
+        box-shadow: var(--theme-shadow-1);
+    }
+
+    .title {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 16px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: var(--2nd-color, #737373);
+    }
+
+    .content {
+        font-family: "SolaimanLipi";
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 400;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        min-height: 38px;
+        display: flex;
+        align-items: center;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .progress-wrapper {
+        .aria-start-value,
+        .aria-current-value {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 15px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            color: #cecece;
+        }
+
+        .aria-current-value {
+            color: var(--theme-clr-1) !important;
+        }
+    }
+}
+.card-actions {
+    .btn {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 12px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        border-radius: 24px;
+        min-width: 86px;
+        min-height: 28px;
+        border: 1px solid transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &.btn-default {
+            background: #f3f3f3;
+            color: #737373 !important;
+
+            &:hover {
+                border-color: var(--bs-gray-500) !important;
+            }
+        }
+
+        &.btn-start {
+            background: #ecfff3;
+            color: var(--theme-clr-1) !important;
+            transition: all 0.2s linear;
+
+            &:hover {
+                border-color: var(--theme-clr-1) !important;
+            }
+        }
+    }
+}
+
+.DashImg-wrapper {
+    .DashImg {
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.OverAllProgressCardComp {
+    box-shadow: 0px 2px 8px 0px #00000026;
+    border-radius: 10px !important;
+    overflow: hidden;
+
+    .overall-content {
+        .overall-title {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 30px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+    }
+}
+
+/**
+ * @desc :- BreadcrumbsComp
+ * created_by :- Kawsar Bin Siraj (04/02/2025)
+ */
+
+.BreadcrumbsComp {
+    position: relative;
+    --adjust: 50px;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: calc(100% + 50px);
+        bottom: 0;
+        left: calc(var(--adjust) / 2 * -1);
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/**
+ * @desc :- UserProfileDropdownComp
+ * created_by :- Kawsar Bin Siraj (06/02/2025)
+ */
+.user-img {
+    --size: 34px;
+    width: var(--size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    outline: 2px solid var(--theme-clr-1);
+}
+
+.UserProfileDropdownComp {
+    position: relative;
+
+    .user-name {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .drop-icon {
+        transition: all 0.3s linear;
+        transform: rotate(0deg);
+
+        &.show {
+            transform: rotate(90deg);
+        }
+    }
+
+    .UserProfileDropdownComp-menu {
+        width: 200px !important;
+        backdrop-filter: blur(100px);
+        box-shadow: 0px 5px 100px 0px #393b3f80;
+        position: absolute;
+        top: calc(100% + 15px);
+        right: 0;
+        z-index: 30;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            top: calc(100% + 10px);
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: -5px;
+            right: 10px;
+            transform: rotate(45deg);
+            background-color: #fff;
+            z-index: -10;
+        }
+
+        .btn {
+            padding: 11px 16px !important;
+            color: #000 !important;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            transition: all 0.2s linear;
+
+            &:nth-child(1) {
+                border-radius: 8px 8px 0 0 !important;
+            }
+
+            &:nth-child(2) {
+                border-radius: 0 0 8px 8px !important;
+            }
+
+            &:hover {
+                background-color: var(--theme-clr-1) !important;
+                color: #fff !important;
+            }
+        }
+    }
+}
+
+/**
+ * @desc :- slider
+ * created_by :- Kawsar Bin Siraj (06/02/2025)
+ */
+#swiper-slides {
+    --max-w: 90%;
+    --swiper-theme-color: var(--theme-clr-1);
+
+    #main-swiper {
+        max-width: calc(var(--max-w) + 0px);
+        width: 100%;
+        margin: auto;
+        .swiper {
+            width: 100%;
+            height: 100%;
+            box-shadow: var(--theme-shadow-1);
+            border-radius: 10px !important;
+            overflow: hidden;
+
+            .swiper-slide {
+                width: 100% !important;
+                display: grid;
+                place-items: center;
+                img {
+                    aspect-ratio: 16 / 8.5 !important;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                --swiper-navigation-size: 38px;
+                margin-inline: 15px !important;
+            }
+        }
+    }
+    #thump-swiper {
+        max-width: calc(var(--max-w) + 0px);
+        width: 100%;
+        margin: auto;
+        position: relative;
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+
+            .swiper-slide {
+                width: 28.57% !important;
+
+                .thumbSwiper-slide {
+                    &.active {
+                        border: 2px solid var(--theme-clr-1);
+                        cursor: default !important;
+                    }
+                }
+
+                &.swiper-slide-visible {
+                    .thumbSwiper-slide {
+                        overflow: hidden;
+                        border-radius: 10px !important;
+                        box-shadow: var(--theme-shadow-1);
+                        margin-right: 10px;
+
+                        &.cursor-pointer {
+                            cursor: pointer !important;
+                        }
+                    }
+                }
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                --swiper-navigation-size: 20px;
+                margin-inline: 15px !important;
+                width: 40px !important;
+                height: 40px !important;
+                background-color: var(--bs-gray-300) !important;
+                border-radius: 100% !important;
+            }
+        }
+
+        .btn-swiper-navigate {
+            width: 40px !important;
+            height: 40px !important;
+            background-color: var(--bs-gray-300) !important;
+            border-radius: 100% !important;
+            position: absolute;
+            left: calc(0% - 40px);
+            top: 50%;
+            transform: translateY(-50%);
+            display: grid;
+            place-items: center;
+            color: var(--theme-clr-1) !important;
+            border: 0;
+
+            &[disabled] {
+                cursor: not-allowed !important;
+                opacity: 0.3 !important;
+            }
+
+            &.btn-swiper-next {
+                left: calc(100% + 15px) !important;
+            }
+        }
+    }
+}
+
+/**
+ * @desc :- reactModal-context
+ * created_by :- Kawsar Bin Siraj (11/02/2025)
+ */
+
+#profile-modal {
+    --topAdjust: 20px;
+    position: absolute;
+    max-width: 700px;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, calc(var(--topAdjust) + -50%));
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 15px 50px 0px #393b3f26;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+
+    &.default {
+        --topAdjust: 20px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.from-bottom {
+        --topAdjust: 0px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.to-top {
+        --topAdjust: -20px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .avatar-list {
+        .user-img {
+            cursor: pointer;
+
+            &.disabled {
+                cursor: no-drop !important;
+            }
+
+            &.no-border {
+                outline: none !important;
+                border: 0 !important;
+            }
+        }
+    }
+
+    .modal-actions {
+        .btn {
+            --btn-w: 200px;
+            --btn-h: 44px;
+            width: var(--btn-w);
+            height: var(--btn-h);
+            &:hover {
+                background-color: var(--theme-clr-1) !important;
+                color: #fff !important;
+            }
+        }
+    }
+}
+
+/**
+ * @desc :- quiz-component-card
+ * created_by :- Kawsar Bin Siraj (11/02/2025)
+ */
+
+.quiz-component-card {
+    .quiz-options {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 15px;
+
+        .form-check-label {
+            cursor: pointer;
+
+            &.disabled {
+                cursor: default !important;
+            }
+        }
+
+        .form-check-input {
+            cursor: pointer;
+
+            &.disabled {
+                cursor: default !important;
+            }
+
+            border-width: 8px !important;
+            transform: scale(0.55) !important;
+            outline: 4px solid #fff !important;
+            box-shadow:
+                var(--bs-gray-400) 0px 1px 0.45rem,
+                var(--bs-gray-400) 0px 0px 0px 0.45rem !important;
+            background-color: #fff !important;
+            border: 1px solid #fff !important;
+            transition: all 0.2s linear;
+
+            &:checked {
+                background-color: var(--theme-clr-1) !important;
+                border: 1px solid var(--theme-clr-1) !important;
+
+                border-width: 8px !important;
+                box-shadow:
+                    var(--theme-clr-1) 0px 1px 0.45rem,
+                    var(--theme-clr-1) 0px 0px 0px 0.45rem !important;
+            }
+
+            &.bg-danger {
+                background-color: var(--bs-danger) !important;
+                border: 1px solid var(--bs-danger) !important;
+
+                border-width: 8px !important;
+                box-shadow:
+                    var(--bs-danger) 0px 1px 0.45rem,
+                    var(--bs-danger) 0px 0px 0px 0.45rem !important;
+            }
+        }
+    }
+
+    .quiz-point {
+        background: #e0f4e7;
+    }
+}
+
+/**
+ * @desc :- result-component-card
+ * created_by :- Kawsar Bin Siraj (24/02/2025)
+ */
+
+.result-component-card {
+    .chapter-title {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+/**
+ * @desc :- AboutComponent
+ * created_by :- Kawsar Bin Siraj (25/02/2025)
+ */
+
+.AboutComp {
+    @media (max-width: 1100px) {
+        img {
+            max-width: 250px !important;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "quizzes": [
+        {
+            "id": 1,
+            "question": "Which famous river delta is located in Bangladesh?",
+            "correct_answer": "Ganges-Brahmaputra Delta",
+            "options": ["Ganges-Brahmaputra Delta", "Mississippi Delta", "Amazon Delta", "Nile Delta"],
+            "point": 1
+        },
+        {
+            "id": 2,
+            "question": "Which is the largest beach in Bangladesh?",
+            "correct_answer": "Cox's Bazar",
+            "options": ["Kuakata", "Saint Martin's Island", "Cox's Bazar", "Patenga"],
+            "point": 1
+        },
+        {
+            "id": 3,
+            "question": "Which city is known as the 'Silicon Valley of Bangladesh'?",
+            "correct_answer": "Sylhet",
+            "options": ["Dhaka", "Chittagong", "Sylhet", "Khulna"],
+            "point": 1
+        },
+        {
+            "id": 4,
+            "question": "What is the main religion in Bangladesh?",
+            "correct_answer": "Islam",
+            "options": ["Hinduism", "Buddhism", "Islam", "Christianity"],
+            "point": 1
+        },
+        {
+            "id": 5,
+            "question": "Which iconic landmark is located in the capital of Bangladesh?",
+            "correct_answer": "National Parliament House",
+            "options": ["National Museum", "National Parliament House", "Lalbagh Fort", "Ahsan Manzil"],
+            "point": 1
+        }
+    ]
+}

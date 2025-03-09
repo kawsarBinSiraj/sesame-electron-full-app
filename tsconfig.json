@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "references": [{ "path": "./tsconfig.node.json" }, { "path": "./tsconfig.web.json" }],
+  "compilerOptions": {
+    "allowJs": true,                     // Allow JavaScript files
+    "jsx": "react",                      // Enable JSX syntax
+    "module": "Node16",                  // Supports both CommonJS and ESModules in Node.js 16+
+    "moduleResolution": "Node16",          // Node.js-style module resolution
+    "esModuleInterop": true,             // Import compatibility for CommonJS
+    "allowSyntheticDefaultImports": true // Allow default imports for CommonJS modules
+  }
+}

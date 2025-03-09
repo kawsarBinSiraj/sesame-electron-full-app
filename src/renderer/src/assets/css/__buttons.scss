@@ -1,0 +1,33 @@
+.ripple-btn {
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.ripple-btn {
+    --bg-anim: #fff;
+    span {
+        position: absolute;
+        background-color: var(--bg-anim);
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        pointer-events: none;
+        animation-name: rippleEffect;
+        animation-iteration-count: 1;
+    }
+}
+
+@keyframes rippleEffect {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 0.7;
+    }
+
+    to {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,42 @@
+/**
+ * @desc :- font face for Quicksand
+ * created_by :- Kawsar Bin Siraj (01/02/2025)
+ */
+@font-face {
+    font-family: "Quicksand";
+    src: url("../fonts/Quicksand/static/Quicksand-Regular.ttf") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../fonts/quicksand/static/Quicksand-Medium.ttf") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../fonts/quicksand/static/Quicksand-SemiBold.ttf") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("../fonts/quicksand/static/Quicksand-Bold.ttf") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+}
+
+/**
+ * @desc :- font face for SolaimanLipi
+ * created_by :- Kawsar Bin Siraj (01/02/2025)
+ */
+@font-face {
+    font-family: "SolaimanLipi";
+    src: url("../fonts/SolaimanLipi/solaimanlipi.woff") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}

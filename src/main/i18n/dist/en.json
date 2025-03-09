@@ -1,0 +1,77 @@
+{
+    "intro": {
+        "title_1": "Welcome to",
+        "title_2": "Safe Internet and \n Early Childhood Development",
+        "desc": "For primary level teachers \n Digital version",
+        "signup": "Sign up",
+        "signin": "Sign in",
+        "another_signup": "Add another account",
+        "create_new_user": "Create New User",
+        "name": "Full Name",
+        "institute": "Institute Name",
+        "phone": "Phone Number",
+        "identification": "Identification Number (Optional)",
+        "create": "Create",
+        "select_username": "Select Your Username \n to sign in",
+        "enter": "Enter"
+    },
+    "sidebar": {
+        "chapters": "Chapters",
+        "quiz": "Quiz",
+        "my_result": "My Result",
+        "my_certificate": "My Certificate",
+        "about": "About"
+    },
+    "credit": {
+        "developed_by": "Designed & Development By :",
+        "company": "Riseup Labs"
+    },
+    "overall": {
+        "overall": "Overall Progress",
+        "last_seen": "Last seen",
+        "start" : "Start chapter to increase your \n overall progress."
+    },
+    "chapters": {
+        "chapters": "Chapters",
+        "congrats": "Congratulations \n on completing this lesson!",
+        "congrats_desc": "To earn your certificate for this course, kindly take the quiz.",
+        "learn_quiz": "Learn Quiz",
+        "quiz": "Quiz",
+        "get_started": "Get Started",
+        "resume": "Resume",
+        "next": "Next"
+    },
+    "quiz": {
+        "quiz_desc": "To earn a certificate, you must complete all chapter lessons and achieve a minimum score of 80% on all quizzes.",
+        "start_quiz": "Start Quiz",
+        "retake_quiz": "Retake Quiz",
+        "view_answer": "View Answer",
+        "have_finish": "You have not completed any chapters yet.",
+        "have_finish_quiz": "You have not completed any Quiz yet. ",
+        "total_quiz_question": "Total quiz question",
+        "my_result": "My Result",
+        "eligible": "You are eligible to receive a certificate.",
+        "collect": "Collect Now",
+        "submit": "Submit"
+    },
+    "certificate": {
+        "my_certificate": "My Certificate",
+        "no_certificate": "You haven’t earned \n any certificates yet.",
+        "no_certificate_desc": "To earn your certificate, you must achieve a minimum \n score of 80% on all quizzes "
+    },
+    "profile": {
+        "hello": "Hello,",
+        "profile_avatar": "Profile Avatar",
+        "profile": "Profile",
+        "logout": "Logout",
+        "cancel": "Cancel",
+        "update": "Update",
+        "save" : "Save"
+    },
+    "about": {
+        "about": "About",
+        "produced_by": "SISIMPUR is Produced By",
+        "support": "With Support From",
+        "developed_by": "Designed & Development By"
+    }
+}
